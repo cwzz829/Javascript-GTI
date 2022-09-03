@@ -16,13 +16,13 @@ body {
   
   .conteudo {
     padding-top: 20px;
-    background-color: white;
+    background-color: rgb(219, 145, 241);
     text-align: center;
     width: 50%;
     margin: 0 auto;
     margin-top: 25vh;
     padding-bottom: 20px;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   
   }
   
@@ -42,12 +42,21 @@ body {
   
   button {
     border: 10;
-    background-color: rgb(65, 37, 221);
+    background-color: rgb(30, 91, 221);
     padding: 10px 20px 10px;
     font-size: 18pt;
     cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 8px;
+    transition-duration: 0.4s;
   }
   
   button:hover {
-    background-color: rgb(107, 31, 230);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+
+  button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }

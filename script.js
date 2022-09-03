@@ -53,7 +53,7 @@ request.onreadystatechange = function(){
     
 
     function finalizarQuiz() {
-        var pontuacao = contador * 6.66;
+        var pontuacao = contador * 6.66 + 0.1;
         document.getElementById("listaRespostas").style.display = "none";
         document.getElementById("resultado").innerHTML = "Sua pontuação: " + pontuacao + "%";
         document.getElementById("confirmar").style.display = "none";
