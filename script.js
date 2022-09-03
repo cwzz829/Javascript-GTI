@@ -1,10 +1,3 @@
-function mostrarQuestao() {
-    
-}
-
-function finalizarQuiz() {
-    
-}
 var content;
 var obj;
 var resposta = document.getElementsByTagName("input");
@@ -26,10 +19,15 @@ request.onreadystatechange = function(){
     //função para mostrar a primeira questão
     function mostrarQuestao() {
         document.getElementById("listaRespostas").style.display = "block";
-        for(var i=0 ; i<4 ; i++){
+        for(var i=0 ; i<obj.length ; i++){
             if(temp === -1 || resposta[i].checked != false){
-            console.log(temp);
+            if(temp != -1){ //contador de pontos em laço for
+                for(var i =0; i < obj[temp].options.length; i++){
+                    contador = contador + resposta[i].checked*obj[temp]['options'][i]['value']
+                }
+            }
             document.getElementById("confirmar").textContent = "Próxima pergunta";
+            document.getElementById("refazer").textContent = "Voltar ao início";
             temp++;
             proximaQuestao();
             }
@@ -38,7 +36,7 @@ request.onreadystatechange = function(){
 
     //função para mostrar as próximas questões   
     function proximaQuestao(){   
-        if(temp < obj.length){
+        if(temp<obj.length){
             document.getElementById("titulo").innerHTML=obj[temp].title;
             for(var i=0 ; i < obj[temp].options.length ; i++){
                 if(resposta[i].checked === true){
@@ -55,11 +53,19 @@ request.onreadystatechange = function(){
     
 
     function finalizarQuiz() {
+        var pontuacao = contador * 6.66;
         document.getElementById("listaRespostas").style.display = "none";
-        document.getElementById("resultado").innerHTML = "Sua pontuação: "  ;
-        document.getElementById("confirmar").textContent = "Reiniciar quiz";
+        document.getElementById("resultado").innerHTML = "Sua pontuação: " + pontuacao + "%";
+        document.getElementById("confirmar").style.display = "none";
+        
+        
     }
 
+    function refreshPage(){
+        window.location.reload();
+    }
+
+    
     
 
     

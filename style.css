@@ -2,7 +2,7 @@ body {
     font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
     margin: 2em;
     font-size: 18px;
-    background-image: url("https://i.ytimg.com/vi/DgtXWjd3H5s/maxresdefault.jpg");
+    background-image: url("https://img.freepik.com/free-vector/watercolor-galaxy-background_79603-2384.jpg?w=360");
     background-size: cover;
     background-color: rgba(0,0,0, 0.5);
     background-blend-mode: multiply;
@@ -41,12 +41,13 @@ body {
   }
   
   button {
-    border: 0;
-    background-color: rgb(200,255,225);
+    border: 10;
+    background-color: rgb(65, 37, 221);
     padding: 10px 20px 10px;
     font-size: 18pt;
+    cursor: pointer;
   }
   
   button:hover {
-    background-color: rgb(100,255,125);
+    background-color: rgb(107, 31, 230);
   }
